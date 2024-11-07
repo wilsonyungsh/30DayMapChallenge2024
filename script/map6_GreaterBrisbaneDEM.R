@@ -4,7 +4,7 @@
 # https://qldspatial.information.qld.gov.au/catalogue/custom/viewMetadataDetails.page?uuid=%7BE5EAAFE5-3EDA-4FC6-B41E-78237CDEC0BE%7D
 
 pacman::p_load(
-  tidyverse,terra,sf,strayr,raster,ggrepel
+  tidyverse,terra,sf,strayr,raster,ggrepel,ggspatial
 )
 
 
@@ -48,7 +48,7 @@ color_break <- round(
     style = "pretty"
   )$brks, 0)
 ## plot using ggplot2
-ggplot(bne_1m) +
+m6 <- ggplot(bne_1m) +
   geom_tile(
     aes(x = x,y = y,fill = elevation)) + 
   guides(col = guide_legend(title = "",alpha = "none")) +
@@ -61,31 +61,24 @@ ggplot(bne_1m) +
     labels =ifelse(color_break %in% c(0, 50, 100), as.character(color_break), "")
   ) +
   geom_sf(data = sa2_bne,fill = NA, col = "black", size = 4) +
-  geom_label_repel(data = sa2_bne %>% st_point_on_surface() %>% mutate(x = st_coordinates(geometry)[,1], y = st_coordinates(geometry)[,2]), 
-                   aes(
-                     x = x,
-                     y = y,
-                       label = sa2_name_2021), # Replace 'station_name' with your station label column
-                   color = "black",
-                   font = "bold",
-                   size = 3.5,
-                   segment.color = "black",    # Color of the leader line
-                   segment.size = 0.5,         # Size of the leader line
-                   box.padding = 0.5,          # Space around the label box
-                   point.padding = 0.5,        # Space around the points
-                   nudge_y = 2,               # Adjust position if needed
-                   nudge_x = 2
-  ) +
+  geom_sf_label(data = sa2_bne,aes(label = sa2_name_2021)) +
   coord_sf(crs = 28356) +
   theme_minimal() +
   theme(axis.text = element_blank(),
         axis.ticks = element_blank(),
-        panel.grid = element_blank()) 
+        plot.background = element_rect(fill = "grey90"),
+        panel.grid = element_blank()) +
+  annotation_north_arrow(
+    location = "tl",  # Top-left corner
+    which_north = "true",  # True north
+    style = north_arrow_fancy_orienteering()  # Style of the north arrow
+  ) +
+  annotation_scale(location = "tr", width_hint = 0.4)  # Bottom-left corner with a width hint
+
+ggsave(plot = m6,filename = "maps/BrisbaneElevation_map6_2.png",dpi = 400,device = "png",width = 20, height = 10,units = "in") 
 
 
-
-
-  ### Below was my failed attempt to render terrain on mapboxgl
+### Below was my failed attempt to render terrain on mapboxgl
 
 # Test on mapgl
 

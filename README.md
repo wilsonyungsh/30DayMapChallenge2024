@@ -11,5 +11,6 @@ A place to put all codes related to the maps created in the challenge
 | Day 5 | Journey  | R + Mapdeck|[Brisbane My First Cycle Journey](maps/Map5_Brisbane_cycle_journey.png)          |
 | Day 6 | Raster   | R + QGIS|[Western Brisbane Hillshade Map](maps/Map6_BrisbaneWesternSuburnHillshade.png)   |
 | Day 7 | Vintage  | R + QGIS|[Brisbane Rail Wild West](maps/Map7_BrisbaneRailWildWest.png)|
+| Day 8 | HDX      | R + Mapdeck[Australia and New Zealand Movement Map](maps/Map8_anz_movement.png)|
 
 

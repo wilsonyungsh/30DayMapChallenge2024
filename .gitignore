@@ -51,3 +51,6 @@ rsconnect/
 # Data file
 data/
 ASGS_DATA/
+
+#playground
+scratch/*

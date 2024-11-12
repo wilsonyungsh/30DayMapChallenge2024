@@ -15,5 +15,5 @@ A place to put all codes related to the maps created in the challenge
 | Day 9 | AI only  | ChatGPT| [Australia Map](maps/Map9_AI_only.jpg)|
 | Day 10 | Pen & Paper | My 6 years old|[Australia City Map by hand](maps/Map10_Pen_paper.jpg)|
 | Day 11 | Arctic | R + Mapgl|[Arctic Summit Boundary Ice Map](maps/Map11_artic_ice_boundary.png) [Map 11 Interactive](https://wilsonyungsh.github.io/interactive/Map11_artic_ice_boundary.html)|
-| Day 12 | Time & Space | R + MapGL |[Australian Capital City Land use change map](maps/Map12_landuse_change.png) [Interactive[https://wilsonyungsh.github.io/interactive//Map12_landuse_change.html]|
+| Day 12 | Time & Space | R + MapGL |[Australian Capital City Land use change map](maps/Map12_landuse_change.png) [Interactive](https://wilsonyungsh.github.io/interactive//Map12_landuse_change.html)|
 

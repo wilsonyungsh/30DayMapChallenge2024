@@ -1,6 +1,6 @@
 ## 2021 and 2016 MB land use change
 
-pacman::p_load(tidyverse,sf,mapgl)
+pacman::p_load(tidyverse,sf,mapgl,htmlwidgets)
 
 invisible(map(list.files("r/",full.names = TRUE),source))
 ## get mb 2021 and 2016 geom
@@ -24,8 +24,8 @@ res_parkland_stats<-stats %>% filter(landuse %in% c("Residential","Parkland")) %
   mutate(change_pr = 100*(yr2021-yr2016)/yr2016)
 
 
-mb_16_res_parklands<- mb_2016_gcc %>% filter(landuse %in% c("Residential","Parkland"))
-mb_21_res_parklands<- mb_2021_gcc %>% filter(landuse %in% c("Residential","Parkland"))
+mb_16_res_parklands<- mb_2016_gcc %>% filter(landuse %in% c("Residential","Parkland")) 
+mb_21_res_parklands<- mb_2021_gcc %>% filter(landuse %in% c("Residential","Parkland")) 
 
 
 sydney_nw <- c(150.96010631536652,-33.696669141153095)
@@ -57,7 +57,7 @@ m2021 <-
                          colors = c("#db254770","#08803290"))
 
 
-ccomparison_map <- ompare(m2016,m2021)
+comparison_map <- compare(m2016,m2021)
 # Export the map as an HTML file
-saveWidget(comparison_map, "Map12_landuse_change.html")
+saveWidget(comparison_map, "data/Map12_landuse_change.html",selfcontained = TRUE)
 

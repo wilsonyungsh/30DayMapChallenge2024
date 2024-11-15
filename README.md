@@ -17,4 +17,5 @@ A place to put all codes related to the maps created in the challenge
 | Day 11 | Arctic | R + Mapgl|[Arctic Summit Boundary Ice Map](maps/Map11_artic_ice_boundary.png) [Map 11 Interactive](https://wilsonyungsh.github.io/interactive/Map11_artic_ice_boundary.html)|
 | Day 12 | Time & Space | R + MapGL |[Greater Brisbane Land use change map](maps/Map12_landuse_change.png) [Interactive](https://wilsonyungsh.github.io/interactive/map12_brisbane_lu_map.html)|
 | Day 13 | A New Tool |[Atlas.co](https://atlas.co/)|[Brisbane Western suburb Bus Stop Walk Catchment](maps/Map13_BrisbaneWestBusStopWalkCatchment.png)|
-| Day 14 | A World Map | TBC | TBC|
+| Day 14 | A World Map | Python | [World Ocean Temperature Map](maps/Map14_ocean_temperature_map.png)|
+| Day 15 | My Data | TBC | TBC|

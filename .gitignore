@@ -1,7 +1,7 @@
 # History files
 .Rhistory
 .Rapp.history
-
+.DS_Store
 # Session Data files
 .RData
 .RDataTmp
@@ -55,4 +55,6 @@ ASGS_DATA/
 #playground
 scratch/*
 
-
+#python
+script/.ipynb*
+*-checkpoint*

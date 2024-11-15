@@ -1,0 +1,6 @@
+geopandas
+requests
+numpy
+matplotlib
+shapely
+folium

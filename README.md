@@ -19,4 +19,4 @@ A place to put all codes related to the maps created in the challenge
 | Day 13 | A New Tool |[Atlas.co](https://atlas.co/)|[Brisbane Western suburb Bus Stop Walk Catchment](maps/Map13_BrisbaneWestBusStopWalkCatchment.png)|
 | Day 14 | A World Map | Python | [World Ocean Temperature Map](maps/Map14_ocean_temperature_map.png)|
 | Day 15 | My Data | R + Mapdeck | [My Fieldtrip Traces](https://wilsonyungsh.github.io/interactive/interactive/Map15_fieldtrips.html)|
-| Day 16 | Choropleth | R + ArcGISPro | [Brisbane SEIFA Map]()
+| Day 16 | Choropleth | R + ArcGISPro | [Brisbane SEIFA Map](maps/Map16_Choropleth.jpg)|

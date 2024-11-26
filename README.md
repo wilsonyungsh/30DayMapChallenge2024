@@ -22,4 +22,5 @@ A place to put all codes related to the maps created in the challenge
 | Day 16 | Choropleth | R + ArcGISPro | [Brisbane SEIFA Map](maps/Map16_Choropleth.jpg)|
 | Day 18 | 3D | R + Deck.gl | [South East Queensland Bus Service Density](https://wilsonyungsh.github.io/interactive/map18_seq_bus_service_density.html)| 
 | Day 24 | Only Circular Shape | R + Mapgl | [Brisbane Toilet Map](https://wilsonyungsh.github.io/interactive/Map24_brisbane_toilets.html)|
-| Day 25 | Heat | 
+| Day 25 | Heat | TBC|
+| Day 26 | Projection|[AUS in 2 projections](maps/Map26_Projections.png)|

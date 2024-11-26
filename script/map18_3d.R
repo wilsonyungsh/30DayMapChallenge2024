@@ -38,7 +38,7 @@ seq_rail_summary <-
                                                             platform_cnt = n(),
                                                             across(c(x,y),.fns = mean),
                                                             service_cnt = sum(trip_id_unique_cnt)) 
-  st_as_sf(coords = c("x","y"),crs = 4326,remove = FALSE)
+  
 
   seq_bus_summary <- 
     seq_pt_stops %>% filter(stop_type %in% "BUS") %>% mutate(stn_name = str_remove_all(stop_name,", .*")) %>% 
@@ -46,7 +46,7 @@ seq_rail_summary <-
     group_by(parent_station,stn_name,stop_type) %>% summarise(platform_ids = paste0(stop_id,collapse = "|"),
                                                               platform_cnt = n(),
                                                               across(c(x,y),.fns = mean),
-                                                              service_cnt = sum(trip_id_unique_cnt)) 
+                                                              service_cnt = sum(trip_id_unique_cnt)) %>% 
   st_as_sf(coords = c("x","y"),crs = 4326,remove = FALSE)
   
 
@@ -106,7 +106,7 @@ map <- deckgl::deckgl(
       )
     ),
     htmltools::tags$h1("SEQ Bus Stop Service Density"),
-    htmltools::tags$div(id = "map-container", map)
+    htmltools::tags$div(id = "map-container",style = "width: 100%; height: 100%;", map)
   )
   # Display the map with the title
   htmltools::browsable(html_page)

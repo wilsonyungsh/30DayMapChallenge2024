@@ -24,3 +24,4 @@ A place to put all codes related to the maps created in the challenge
 | Day 24 | Only Circular Shape | R + Mapgl | [Brisbane Toilet Map](https://wilsonyungsh.github.io/interactive/Map24_brisbane_toilets.html)|
 | Day 25 | Heat | TBC|TBC|
 | Day 26 | Projection|R + ggplot2|[AUS in 2 projections](maps/Map26_Projections.png)|
+| Day 29 | Overturemaps | R + Mapdeck | [Greater Taipei Buidling Height](https://wilsonyungsh.github.io/interactive/Map29.html)

@@ -19,3 +19,4 @@ p2<-ggplot() +
 
 p1/p2
 
+ggsave(filename = "maps/Map26_Projections.png",device = "png",dpi = 400)

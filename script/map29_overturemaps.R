@@ -18,16 +18,16 @@ tpe_building<-st_read("data/greaterTaipei.geojson") %>%  select(id,names,height,
     tryCatch(fromJSON(x)$primary, error = function(e) NA)
   })) %>% select(-names)
 
-
-pal <- scales::col_quantile(
-  "viridis",
-  tpe_building$height,
-  n = 5
-)
-
-tpe_building$color <- pal(
-  tpe_building$height
-)
+# 
+# pal <- scales::col_quantile(
+#   "viridis",
+#   tpe_building$height,
+#   n = 5
+# )
+# 
+# tpe_building$color <- pal(
+#   tpe_building$height
+# )
 
 
 mapdeck(style = mapdeck_style(style = "light"),zoom = 12,location =tpe,pitch = 45, ) %>% 
